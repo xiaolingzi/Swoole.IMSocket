@@ -1,0 +1,4 @@
+{
+	"avatar":"http://test.com/avatar",
+	"logPath":"/var/log/swoole"
+}

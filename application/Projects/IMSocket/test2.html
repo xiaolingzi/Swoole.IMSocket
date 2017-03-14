@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+  var exampleSocket = new WebSocket("ws://192.168.18.253:9501");
+  exampleSocket.onopen = function (event) {
+	document.getElementById("result").innerHTML="亲爱的服务器！我连上你啦！";
+	exampleSocket.send('{"infoType": 100001,"connectionType": 2,"data":{"token":"","userId":2}}#$#'); 
+  };
+  exampleSocket.onmessage = function (event) {
+	document.getElementById("result").innerHTML=event.data;
+	console.log(event.data);
+  }
+  </script>
+</head>
+<body>
+<input  type="text" id="content" value=''>
+<button  onclick="exampleSocket.send( document.getElementById('content').value )">发送</button>
+
+<br/>
+<div id="result"></div>
+</body>
+</html>

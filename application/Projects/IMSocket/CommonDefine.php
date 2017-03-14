@@ -1,0 +1,22 @@
+<?php
+namespace Projects\IMSocket;
+
+class CommonDefine
+{
+	const INFO_TYPE_VALID=100001;
+	const INFO_TYPE_WARNING=100002;
+	const INFO_TYPE_MESSAGE_USER=110001;
+	const INFO_TYPE_MESSAGE_CLUB=110002;
+	const INFO_TYPE_MESSAGE_USER_CONFIRM=110011;
+	const INFO_TYPE_MESSAGE_CLUB_CONFIRM=110012;
+	
+	const CONNECTION_TYPE_SOCKET=1;
+	const CONNECTION_TYPE_WEBSOCKET=2;
+	
+	const File_TYPE_FD=1;
+	const File_TYPE_USER=2;
+	
+	const MESSAGE_END_FLAG="#$#";
+	
+	
+}
