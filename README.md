@@ -5,7 +5,7 @@
   
 php /{实际目录}/application/Projects/IMSocket/App.php -i e  
   
-前台后台运行可以通过SwooleServer.php里面的配置项进行配置  
+前台后台运行可以通过SwooleServer.php里面的配置项进行配置,还要注意将公共和项目下的config目录中的配置修改为自己的  
 swoole的相关文档请前往 [http://www.swoole.com](http://www.swoole.com)  
 ## 消息格式  
 客户端消息发送格式如下（注意要加上结束符#$#）：  
