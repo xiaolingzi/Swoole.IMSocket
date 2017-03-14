@@ -1,13 +1,21 @@
 # ![xiaolingzi](https://raw.githubusercontent.com/xiaolingzi/Swoole.IMSocket/master/logo.gif) Swool.IMSocket 基于swoole的聊天通讯socket  
-更多分享请访问 [https://www.xxling.com](https://www.xxling.com)  
-## 消息格式  
-客户端消息发送格式如下（注意要加上结束符#$#）：  
+更多分享请访问 [https://www.xxling.com](https://www.xxling.com)  
+## 运行  
+在安装好swoole和php之后，直接运行项目文件夹下的App.php文件  
+  
+php /{实际目录}/application/Projects/IMSocket/App.php -i e  
+  
+前台后台运行可以通过SwooleServer.php里面的配置项进行配置  
+swoole的相关文档请前往 [http://www.swoole.com](http://www.swoole.com)  
+## 消息格式  
+客户端消息发送格式如下（注意要加上结束符#$#）：  
 身份验证  
 {"infoType": 100001,"connectionType": 2,"data":{"token":"","userId":1}}#$#  
 实际应用中token改为实际验证的token  
   
 双人对话  
 {"infoType": 110001,"connectionType": 2,"data":{"userId":1,"toUserId":2,"messageContent":"user message","messageType":1}}#$#  
+  
 群聊消息  
 {"infoType": 110002,"connectionType": 2,"data":{"userId":1,"clubId":1,"messageContent":"club message","messageType":1}}#$#  
   
